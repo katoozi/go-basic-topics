@@ -14,4 +14,6 @@ func main() {
 
 	fmt.Println(name, age, isCool, family, size, wieght)
 	fmt.Printf("%T\n", isCool)
+
+	size = 1.2 // for reassign you have to use = not :=
 }

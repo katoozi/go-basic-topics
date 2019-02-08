@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 	fmt.Println("Conditionals")
@@ -32,4 +35,34 @@ func main() {
 	default:
 		fmt.Println("Color is not red or blue")
 	}
+
+	var (
+		even   int
+		odd    int
+		zeroes int
+		totla  int
+	)
+
+	numbers := []int{1, 2, 3, 4, 5, 0, -1, 8, 9, 10}
+
+	var err error
+
+Abort:
+	for _, n := range numbers {
+		switch {
+		case n == 0:
+			zeroes++
+		case n%2 == 0:
+			even++
+		case n%2 == 1:
+			odd++
+		default:
+			err = errors.New("Found Negetive Number")
+			break Abort
+		}
+	}
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Printf("Even %d, Odd %d, Zeroes %d, total %d\n", even, odd, zeroes, totla)
 }

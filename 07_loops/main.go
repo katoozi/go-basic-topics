@@ -25,4 +25,27 @@ func main() {
 			fmt.Printf("Buzz %d\n", i)
 		}
 	}
+
+	var (
+		even  int
+		odd   int
+		total int
+	)
+
+	numbers := []int{1, 2, 3, 5, 0, 7, 8, 9, 10}
+Abort:
+	for i := 0; i < 10; i++ {
+		for _, n := range numbers {
+			total++
+			if n == 0 {
+				continue Abort
+			}
+			if n%2 == 0 {
+				even++
+			} else {
+				odd++
+			}
+		}
+	}
+	fmt.Printf("Even %d, Odd %d, totoal %d\n", even, odd, total)
 }
