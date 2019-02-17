@@ -23,4 +23,5 @@ func main() {
 	fmt.Println(fruitSlice)
 	fmt.Println(len(fruitSlice))
 	fmt.Println(fruitSlice[1:2])
+	fmt.Println(cap(fruitSlice))
 }
