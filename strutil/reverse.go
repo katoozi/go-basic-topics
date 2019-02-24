@@ -1,5 +1,6 @@
 package strutil
 
+// Reverse will reverse the given string
 func Reverse(s string) string {
 	// this function will reverse the given string
 	runes := []rune(s)
