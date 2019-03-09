@@ -5,10 +5,12 @@ import (
 	"net/http"
 )
 
+// Routes will add the routes to http server
 func Routes() {
 	http.HandleFunc("/sendjson", SendJSON)
 }
 
+// SendJSON convert literal struct to json and send it to user
 func SendJSON(rw http.ResponseWriter, r *http.Request) {
 	u := struct {
 		Name  string
